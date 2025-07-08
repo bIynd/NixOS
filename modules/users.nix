@@ -5,9 +5,9 @@
 }: let
   username = config.var.username;
 in {
-  programs.fish.enable = true;
+  # programs.fish.enable = true;
   users = {
-    defaultUserShell = pkgs.fish;
+    defaultUserShell = pkgs.nushell;
     users.${username} = {
       isNormalUser = true;
       description = "${username} account";

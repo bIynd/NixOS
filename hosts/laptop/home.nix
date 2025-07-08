@@ -10,7 +10,7 @@
     # Programs
     ../../home/programs/wezterm
     # ../../home/programs/nvf
-    # ../../home/programs/shell
+    ../../home/programs/shell
     # ../../home/programs/fetch
     ../../home/programs/git
     # ../../home/programs/git/signing.nix
