@@ -67,7 +67,10 @@
         package = pkgs.source-sans-pro;
         name = "Source Sans Pro";
       };
-      serif = config.stylix.fonts.sansSerif;
+      serif = {
+        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
+        name = "SFProDisplay Nerd Font";
+      };
       emoji = {
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
