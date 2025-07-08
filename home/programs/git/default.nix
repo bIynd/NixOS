@@ -26,4 +26,13 @@ in {
       color.ui = "1";
     };
   };
+
+  programs.ssh = {
+    enable = true;
+    addKeysToAgent = "yes";
+    # Opcional: puedes especificar las claves
+    extraConfig = ''
+      IdentityFile ~/.ssh/id_ed25519
+    '';
+  };
 }
