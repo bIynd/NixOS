@@ -27,6 +27,7 @@ in {
     };
   };
 
+  # SSH configuration
   programs.ssh = {
     enable = true;
     addKeysToAgent = "yes";
