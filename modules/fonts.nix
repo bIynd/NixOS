@@ -18,6 +18,10 @@
       nerd-fonts.meslo-lg
       openmoji-color
       twemoji-color-font
+
+      inputs.apple-fonts.packages.${pkgs.system}.sf-pro
+      inputs.apple-fonts.packages.${pkgs.system}.sf-mono
+      inputs.apple-fonts.packages.${pkgs.system}.new-york
     ];
 
     enableDefaultPackages = false;
