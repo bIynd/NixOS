@@ -46,6 +46,7 @@
     packages = with pkgs; [
       # Apps
       bitwarden # Password manager
+      vesktop
       #   vlc # Video player
       #   blanket # White-noise app
       #   obsidian # Note taking app
