@@ -74,8 +74,8 @@
         listgen = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 
         # Build system
-        switch-build = "sudo nixos-rebuild switch --flake .dotfiles/.";
-        test-build = "sudo nixos-rebuild test --flake .dotfiles/.";
+        switch-build = "sudo nixos-rebuild switch --flake ~/.dotfiles/.";
+        test-build = "sudo nixos-rebuild test --flake ~/.dotfiles/.";
 
         # Git
         g = "git";

@@ -159,8 +159,8 @@ in {
 
       windowrulev2 = [
         # Blur
-        "blur, class:^(org\\.wezfurlong\\.wezterm)$"
-        "blur, class:^(code-url-handler|Code)$"
+        # "blur, class:^(org\\.wezfurlong\\.wezterm)$"
+        # "blur, class:^(code-url-handler|Code)$"
 
         "float, tag:modal"
         "pin, tag:modal"
