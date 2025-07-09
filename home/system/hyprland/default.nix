@@ -54,8 +54,9 @@ in {
       enable = false;
       variables = [
         "--all"
-      ]; # https://wiki.hyprland.org/Nix/Hyprland-on-Home-Manager/#programs-dont-work-in-systemd-services-but-do-on-the-terminal
+      ];
     };
+
     package = null;
     portalPackage = null;
 
@@ -118,6 +119,7 @@ in {
         active_opacity = active-opacity;
         inactive_opacity = inactive-opacity;
         rounding = rounding;
+
         shadow = {
           enabled = true;
           range = 20;
@@ -128,7 +130,13 @@ in {
             if blur
             then "true"
             else "false";
-          size = 18;
+          size = 8;
+          passes = 3;
+          new_optimizations = true;
+          ignore_opacity = false;
+          noise = 0.01;
+          contrast = 1.0;
+          brightness = 1.0;
         };
       };
 
@@ -150,6 +158,10 @@ in {
       };
 
       windowrulev2 = [
+        # Blur
+        "blur, class:^(org\\.wezfurlong\\.wezterm)$"
+        "blur, class:^(code-url-handler|Code)$"
+
         "float, tag:modal"
         "pin, tag:modal"
         "center, tag:modal"

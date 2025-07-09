@@ -75,6 +75,8 @@
       #   optipng
       #   jpegoptim
       btop
+      eza
+      bat
       fastfetch
       alejandra
 

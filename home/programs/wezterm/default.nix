@@ -7,35 +7,56 @@
     enable = true;
 
     extraConfig = ''
-      local wezterm = require("wezterm")
-      local act = wezterm.action
+      local wezterm = require 'wezterm'
 
       return {
-        font = wezterm.font_with_fallback({
-          { family = "JetBrainsMono Nerd Font", weight = "Regular" },
-          { family = "Fira Code", weight = "Regular" },
-        }),
-        font_size = 12,
-        window_background_opacity = 0.92,
-        text_background_opacity = 1.0,
-        enable_scroll_bar = false,
-        enable_kitty_graphics = true,
-        enable_tab_bar = false,
-        window_padding = { left = 8, right = 8, top = 8, bottom = 8 },
-        color_scheme = wezterm.gui.get_appearance():find("Dark")
-          and "Catppuccin Mocha"
-          or "Catppuccin Latte",
+        -- General
+        font_size = 14.0,
+        font = wezterm.font('JetBrains Mono'),
+        adjust_window_size_when_changing_font_size = false,
         default_cursor_style = "BlinkingBar",
-        scrollback_lines = 7000,
-        keys = {
-          { key = "L", mods = "CTRL|SHIFT", action = act.ClearScrollback("ScrollbackAndViewport") },
-        },
+
+        -- Appearance
+        enable_tab_bar = false,
+        enable_scroll_bar = false,
+        -- window_decorations = 'RESIZE',
+        window_background_opacity = 0.78,
+        text_background_opacity = 1.0,
+
+        -- Colors
+
+        -- Wayland / rendering
         enable_wayland = true,
         front_end = "WebGpu",
         underline_position = -3,
         animation_fps = 60,
         max_fps = 60,
-      }
-    '';
+
+        -- Kitty graphics protocol support
+        enable_kitty_graphics = true,
+
+        -- Key bindings
+        keys = {
+          {
+            key = 'q',
+            mods = 'CTRL',
+            action = wezterm.action.ToggleFullScreen,
+          }
+          -- {
+          --    key = '\',
+          --    mods = 'CTRL',
+          --    action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+          --  },
+        },
+
+        -- Mouse bindings
+        mouse_bindings = {
+          {
+            event = { Up = { streak = 1, button = 'Left' } },
+            mods = 'CTRL',
+            action = wezterm.action.OpenLinkAtMouseCursor,
+          },
+        }
+      }'';
   };
 }

@@ -11,8 +11,8 @@
       rounding = 0;
       gaps-in = 10;
       gaps-out = 10 * 2;
-      active-opacity = 0.96;
-      inactive-opacity = 0.92;
+      active-opacity = 0.76;
+      inactive-opacity = 0.66;
       blur = true;
       border-size = 1;
       animation-speed = "fast"; # "fast" | "medium" | "slow"

@@ -35,24 +35,6 @@
           display_errors = {
             exit_code = false;
           };
-
-          menus = [
-            {
-              name = "completion_menu";
-              only_buffer_difference = false;
-              marker = "? ";
-              type = {
-                layout = "columnar"; # list, description
-                columns = 4;
-                col_padding = 2;
-              };
-              #   style = {
-              # text = "magenta";
-              # selected_text = "blue_reverse";
-              # description_text = "yellow";
-              #   };
-            }
-          ];
         };
         completions = let
           completion = name: ''
@@ -99,7 +81,7 @@
         g = "git";
 
         # Archivos (eza)
-        ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";
+        # ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";
         ll = "eza -lF --time-style=long-iso --icons";
         tree = "eza --tree --icons";
 
